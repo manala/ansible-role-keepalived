@@ -1,0 +1,18 @@
+---
+
+- hosts: all
+
+  vars:
+    manala_keepalived_environment:
+      - DAEMON_ARGS: --log-console --log-detail
+
+  pre_tasks:
+    - include: pre_tasks/disable_systemd.yml
+    - include: pre_tasks/apt.yml
+
+  roles:
+    - manala.keepalived
+
+  post_tasks:
+    - name: Goss
+      command: goss --gossfile {{ test }}.goss.yml validate
