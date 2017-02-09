@@ -8,3 +8,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Install and configure keepalived
+- Configure keepalived environment file
