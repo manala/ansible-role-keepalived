@@ -1,0 +1,11 @@
+---
+
+package:
+  keepalived:
+    installed: true
+
+command:
+  keepalived --version:
+    exit-status: 0
+    stderr:
+      - Keepalived v
